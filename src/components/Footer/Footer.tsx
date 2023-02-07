@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.svg";
 import twitter from "@/assets/icons/twitter.svg";
 import telegram from "@/assets/icons/telegram.svg";
@@ -26,14 +27,15 @@ const Footer: FC = () => {
         <div className=" items-center  lg:flex">
           <ul className="hidden h-full items-end gap-5 lg:flex ">
             {navigation.map((item) => (
-              <li
+              <Link
+                to={item.href}
                 key={item.id}
                 className={`${
                   item.current ? "text-black " : "text-gray-500"
                 } cursor-pointer p-4`}
               >
                 {item.name}
-              </li>
+              </Link>
             ))}
           </ul>
         </div>

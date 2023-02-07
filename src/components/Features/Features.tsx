@@ -1,7 +1,7 @@
 import { features } from "@/data/features";
 import { useState } from "react";
 import ReactCardFlip from "react-card-flip";
-import Card from "./Card";
+import Feature from "./Feature";
 
 const Features = () => {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -19,7 +19,7 @@ const Features = () => {
         </div>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
-            <Card key={`card-${feature.id}`} feature={feature} />
+            <Feature key={`card-${feature.id}`} feature={feature} />
           ))}
           <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
             <div
