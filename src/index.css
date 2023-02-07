@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+html,
+body {
+  min-height: 100vh;
+  @apply bg-bodyBg;
+}
+
+.swiper {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.swiper-button-prev {
+  left: 0px;
+}
+
+.swiper-button-next {
+  right: 0px;
+}
+
+.swiper-button-prev::after {
+  content: "";
+  background: url("./assets/testimonials/prev.svg") no-repeat center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5e7eb;
+  color: #000;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.swiper-button-next::after {
+  content: "";
+  background: url("./assets/testimonials/next.svg") no-repeat center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5e7eb;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.swiper-button-prev:hover::after,
+.swiper-button-next:hover::after {
+  content: "";
+  background: url("./assets/testimonials/next-white.svg") no-repeat center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #1e293b;
+  color: #fff;
+}
+
+.swiper-button-prev:hover::after {
+  transform: rotate(180deg);
+}
