@@ -1,10 +1,7 @@
-import { FC } from "react";
-import { Navigation } from "swiper";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import Slider from "react-slick";
-import client from "@/assets/testimonials/client.png";
+import { FC } from 'react';
+import { Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import client from '@/assets/testimonials/client.png';
 
 interface Testimonial {
   id: number;
@@ -22,8 +19,8 @@ const Testimonials: FC = () => {
         className={className}
         style={{
           ...style,
-          display: "block",
-          background: "#E5E7EB",
+          display: 'block',
+          background: '#E5E7EB',
         }}
         onClick={onClick}
       />
@@ -37,8 +34,8 @@ const Testimonials: FC = () => {
         className={className}
         style={{
           ...style,
-          display: "block",
-          background: "#E5E7EB",
+          display: 'block',
+          background: '#E5E7EB',
         }}
         onClick={onClick}
       />
@@ -60,10 +57,10 @@ const Testimonials: FC = () => {
     for (let i = 0; i < 6; i++) {
       arr.push({
         id: Math.random(),
-        stars: "★★★★★",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed orci sapien, malesuada sollicitudin mi vel, tristique eleifend metus.",
+        stars: '★★★★★',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed orci sapien, malesuada sollicitudin mi vel, tristique eleifend metus.',
         logo: client,
-        name: "Lorem Ipsum",
+        name: 'Lorem Ipsum',
       });
     }
 
@@ -78,8 +75,8 @@ const Testimonials: FC = () => {
             Lorem Ipsum <br /> Dolor Sit Amet
           </h2>
           <p className="mb-8 text-sm font-extralight md:text-xl lg:mb-16 lg:text-xl ">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed orci
-            sapien, malesuada sollicitudin mi vel, tristique eleifend metus.{" "}
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed orci sapien, malesuada sollicitudin mi vel,
+            tristique eleifend metus.{' '}
           </p>
         </div>
         <Swiper
@@ -110,14 +107,11 @@ const Testimonials: FC = () => {
               key={testimonial.id}
             >
               <div className="mb-2 flex w-full items-center justify-center gap-2">
-                <span className="text-sm font-extralight">
-                  {testimonial.stars}
-                </span>
+                <span className="text-sm font-extralight">{testimonial.stars}</span>
               </div>
               <p className="mt-3 text-center text-sm font-semibold md:text-lg">
-                “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                orci sapien, malesuada sollicitudin mi vel, tristique eleifend
-                metus.”
+                “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed orci sapien, malesuada sollicitudin mi
+                vel, tristique eleifend metus.”
               </p>
               <div className="mt-3 flex flex-col items-center gap-2">
                 <img src={client} alt="" className="h-12 w-12 rounded-full" />
